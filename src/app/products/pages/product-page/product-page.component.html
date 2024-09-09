@@ -2,7 +2,7 @@
 <hr>
 
 <!-- formulario -->
- <form>
+ <form [formGroup]="myForm">
 
   <div class="row g-3 aling-items-center mb-3">
 
@@ -11,7 +11,8 @@
     </div>
 
     <div class="col-auto">
-      <input type="text" class="form-cotrol">
+      <!-- conectamos el form control name al campo -->
+      <input formControlName="name" type="text" class="form-cotrol">
     </div>
 
     <div class="col-auto">
@@ -21,11 +22,12 @@
   </div>
     <div class="row">
       <div class="col">
-        <button class="btn btn-primary">
+        <button (click)="changeColor()" class="btn btn-primary">
           Cambiar color
         </button>
       </div>
     </div>
 
-
  </form>
+ <pre class="mt-5">{{ myForm.get('name')?.errors |json }}</pre>
+ <p>Color: {{ color }}</p>
