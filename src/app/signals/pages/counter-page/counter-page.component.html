@@ -1,1 +1,14 @@
-<p>counter-page works!</p>
+<h1>Counter: {{ counter() }}</h1>
+<hr>
+<!-- mi contador al cuadrado -->
+<h2>Square Counter: {{ squareCounter() }}</h2>
+<hr>
+<!-- creamos un metodo en el ts increase para que el botón incremente en 1 -->
+<button (click)="increaseBy(+1)" class="btn btn-primary">+ 1</button>
+&nbsp;
+
+<button (click)="increaseBy(-1)" class="btn btn-primary">- 1</button>
+&nbsp;
+<!-- para resetear nuestro contador y ponerlo a 0 -->
+<button (click)="counter.set(0)" class="btn btn-primary">Reset</button>
+
