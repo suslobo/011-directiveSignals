@@ -6,4 +6,9 @@ import { Component } from '@angular/core';
 })
 export class PropertiesPageComponent {
 
+  //implementamos el método del html
+  onFielUpdated( field: string, value: string) {
+    
+  }
+
 }
